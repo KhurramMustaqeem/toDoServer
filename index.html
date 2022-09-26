@@ -26,7 +26,7 @@
 
     function myTodo() {
         let todoT = document.querySelector("#todo").value
-        axios.post(`http://localhost:3000/todo`, {
+        axios.post(`https://lavender-cockatoo-coat.cyclic.app//todo`, {
             text: todoT
         })
             .then(function (response) {
@@ -44,7 +44,7 @@
     }
 
     function getAllTodos() {
-        axios.get(`http://localhost:3000/todos`)
+        axios.get(`https://lavender-cockatoo-coat.cyclic.app//todos`)
             .then(function (response) {
                 console.log(response.data);
                 document.querySelector('#result').innerHTML = ""
