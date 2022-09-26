@@ -40,4 +40,5 @@ h1{
 
 .button{
     width: 100px;
+    border-radius: 5px;
 }
