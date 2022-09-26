@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todoApp</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<div class="head">
+    <h1 class="h1">Todo App</h1>
+<div  class="input"  onsubmit="myTodo(); return false">
+    <input id="todo" placeholder="..." type="text" required>
+    <button class="button" type="submit">Add</button>
+</div>
+<div class="result">
+    <h3 id="result"> </h3>
+</div>
+</div>
+
+<script>
+
+    function myTodo() {
+        let todoT = document.querySelector("#todo").value
+        axios.post(`http://localhost:3000/todo`, {
+            text: todoT
+        })
+            .then(function (response) {
+                console.log(response.data);
+                document.querySelector('#result').innerHTML = ""
+
+                response.data.data.map(eachTodo => {
+                    document.querySelector('#result').innerHTML += eachTodo
+                    document.querySelector('#result').innerHTML += '<br>'
+                })
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+    }
+
+    function getAllTodos() {
+        axios.get(`http://localhost:3000/todos`)
+            .then(function (response) {
+                console.log(response.data);
+                document.querySelector('#result').innerHTML = ""
+
+                response.data.data.map(eachTodo => {
+                    document.querySelector('#result').innerHTML += eachTodo
+                    document.querySelector('#result').innerHTML += '<br>'
+                })
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+    }
+    setInterval(getAllTodos, 1000);
+
+</script>
+</body>
+
+</html>
