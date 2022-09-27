@@ -91,17 +91,32 @@ h1 {
     html {
         font-size: 35%;
     }
+    
 }
 
 @media(max-width:568px) {
     html {
         font-size: 35%;
     }
+    #todo{
+        height: 9rem;
+        font-size: medium;
+    }
+    .button{
+        height: 11rem;
+    }
 }
 
 @media(max-width:468px) {
     html {
         font-size: 35%;
+    }
+    #todo{
+        height: 9rem;
+        font-size: medium;
+    }
+    .button{
+        height: 11rem;
     }
 }
 
@@ -111,10 +126,11 @@ h1 {
 
     }
     #todo{
-        height: 7rem;
+        height: 9rem;
+        font-size: medium;
     }
     .button{
-        height: 9rem;
+        height: 11rem;
     }
 }
 
