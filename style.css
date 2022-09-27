@@ -105,9 +105,16 @@ h1 {
     }
 }
 
-@media(max-width:368px) {
+@media(max-width:390px) {
     html {
         font-size: 30%;
+
+    }
+    #todo{
+        height: 7rem;
+    }
+    .button{
+        height: 9rem;
     }
 }
 
