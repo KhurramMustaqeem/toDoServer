@@ -11,7 +11,8 @@ body {
     background-size: cover;
     font-family: 'Rajdhani', sans-serif;
     padding-top: 10rem;
-    background-repeat: no-repeat;    
+    overflow-y: visible;
+    height: 88vh;
     
 }
 
