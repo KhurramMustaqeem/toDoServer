@@ -11,10 +11,7 @@ body {
     background-size: cover;
     font-family: 'Rajdhani', sans-serif;
     padding-top: 10rem;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    height: 100vh;
-    
+    background-repeat: no-repeat;    
     
 }
 
@@ -162,10 +159,10 @@ body {
     white-space: pre;
     overflow: hidden;     
     max-width: 52rem;
-  } */
+  } 
   
 
-/* .h1 {
+.h1 {
     animation: animated-text 2s steps(11,end) 0.5s 1 normal both,
         animated-cursor 750ms steps(11,end) infinite;
   }
