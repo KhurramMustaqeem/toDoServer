@@ -59,6 +59,7 @@ server.listen(port, () => {
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 let dbURI = 'mongodb+srv://khurram:github+123@cluster0.eioklfl.mongodb.net/todoserver?retryWrites=true&w=majority';
+// let dbURI = 'mongodb://localhost/mydatabase';
 mongoose.connect(dbURI);
 
 

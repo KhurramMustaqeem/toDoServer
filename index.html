@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>todoApp</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="/todofavicon-16x16.png" type="image/x-icon">
 
@@ -40,7 +43,7 @@
                 document.querySelector('#result').innerHTML = ""
 
                 response.data.data.map(eachTodo => {
-                    document.querySelector('#result').innerHTML += eachTodo
+                    document.querySelector('#result').innerHTML += eachTodo.text
                     document.querySelector('#result').innerHTML += '<br>'
                 })
             })
@@ -56,7 +59,7 @@
                 document.querySelector('#result').innerHTML = ""
 
                 response.data.data.map(eachTodo => {
-                    document.querySelector('#result').innerHTML += eachTodo
+                    document.querySelector('#result').innerHTML += eachTodo.text
                     document.querySelector('#result').innerHTML += '<br>'
                 })
             })
@@ -65,7 +68,7 @@
             })
     }
     getAllTodos();
-    setInterval(getAllTodos, 3000);
+    setInterval(getAllTodos, 1000);
 
 </script>
 </body>
