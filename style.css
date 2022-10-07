@@ -11,9 +11,8 @@ body {
     background-size: cover;
     font-family: 'Rajdhani', sans-serif;
     padding-top: 10rem;
-    overflow-y: visible;
-    height: 88vh;
-    
+    overflow: hidden;
+    height: 100vh;
 }
 
 .head {
@@ -26,16 +25,16 @@ body {
 #result {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     background-color: rgba(24, 24, 27, 0.6);
     border: 0.1rem solid white;
     border-radius: 1rem;
     width: 60rem;
     color: bisque;
     padding: 1.2rem;
-    overflow: hidden;
     font-size: medium;
-
+    justify-content: start;
+    align-items: none;
+    overflow-y: scroll;
 }
 
 #todo {
@@ -45,7 +44,7 @@ body {
     font-size: large;
     outline: none;
     background-color: floralwhite;
-    
+
 
 }
 
@@ -84,7 +83,8 @@ body {
     html {
         font-size: 55%;
     }
-    .h1{
+
+    .h1 {
         font-size: 8rem;
     }
 }
@@ -99,24 +99,28 @@ body {
     html {
         font-size: 35%;
     }
-    .h1{
+
+    .h1 {
         font-size: 10rem;
     }
-    
+
 }
 
 @media(max-width:568px) {
     html {
         font-size: 35%;
     }
-    #todo{
+
+    #todo {
         height: 8rem;
         font-size: medium;
     }
-    .button{
+
+    .button {
         height: 9rem;
     }
-    .h1{
+
+    .h1 {
         font-size: 9rem;
     }
 }
@@ -125,14 +129,17 @@ body {
     html {
         font-size: 35%;
     }
-    #todo{
+
+    #todo {
         height: 8rem;
         font-size: medium;
     }
-    .button{
+
+    .button {
         height: 9rem;
     }
-    .h1{
+
+    .h1 {
         font-size: 9rem;
     }
 }
@@ -142,14 +149,17 @@ body {
         font-size: 30%;
 
     }
-    #todo{
+
+    #todo {
         height: 8rem;
         font-size: medium;
     }
-    .button{
+
+    .button {
         height: 9rem;
     }
-    .h1{
+
+    .h1 {
         font-size: 8rem;
     }
 }
@@ -175,6 +185,3 @@ body {
     from{width: 0%;}
     to{width: 520px;}
   } */
-
-
-  
